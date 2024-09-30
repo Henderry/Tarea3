@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web Responsivo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos globales */
+        header, footer {
+            background-color: #8fbc8f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        aside {
+            background-color: #b0c4de;
+            padding: 15px;
+        }
+
+        main {
+            background-color: #e6e6fa;
+            padding: 15px;
+        }
+
+        .images-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        .images-container img {
+            width: 100%;
+            height: 100px;
+            background-color: #ffcc99;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+       @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .images-container {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <header>
+        <h1>Diseño Web Responsivo</h1>
+    </header>
+
+   <nav>
+        <a href="#concepto" style="color: white; text-decoration: none;">Concepto</a> |
+        <a href="#viewport" style="color: white; text-decoration: none;">Viewport</a> |
+        <a href="#media-queries" style="color: white; text-decoration: none;">Media Queries</a>
+    </nav>
+
+    <div class="grid-container">
+        <aside>
+            <h2>Barra lateral</h2>
+            <p>Información adicional.</p>
+        </aside>
+
+      <main>
+            <section id="concepto">
+                <h2>1. Concepto de Diseño Web Responsivo</h2>
+                <p>El <strong>diseño web responsivo</strong> es un enfoque de diseño web que hace que las páginas web se vean bien en una variedad de dispositivos y tamaños de pantalla. En lugar de tener diferentes sitios para móviles y escritorio, un solo sitio puede adaptarse a todas las resoluciones.</p>
+                
+                <h3>Importancia del Diseño Web Responsivo:</h3>
+                <ul>
+                    <li>Ofrece una experiencia de usuario óptima independientemente del dispositivo que se utilice.</li>
+                    <li>Mejora la accesibilidad y aumenta el tiempo de permanencia en el sitio web.</li>
+                    <li>Es un factor clave en el SEO, ya que Google prioriza los sitios responsivos.</li>
+                </ul>
+                <h3>Principios Básicos del Diseño Adaptable:</h3>
+                <ul>
+                    <li>Uso de diseños fluidos que se ajustan al tamaño de la pantalla.</li>
+                    <li>Empleo de imágenes flexibles y adaptables.</li>
+                    <li>Implementación de media queries para adaptar el diseño en función del dispositivo.</li>
+                </ul>
+            </section>
+
+            <section id="viewport">
+                <h2>2. Funcionamiento del Viewport</h2>
+                <p>El <strong>viewport</strong> es el área visible de una página web en la pantalla de un dispositivo. Configurar correctamente el viewport es esencial para que el contenido del sitio web se ajuste adecuadamente en cualquier dispositivo.</p>
+                
+                <h3>Importancia del Viewport en el Diseño Responsivo:</h3>
+                <ul>
+                    <li>El viewport controla cómo se escala una página en dispositivos móviles.</li>
+                    <li>Es crucial para evitar el zoom o desplazamientos horizontales innecesarios.</li>
+                </ul>
+
+                <h3>Cómo Configurar el Viewport:</h3>
+                <p>Se utiliza una metaetiqueta para definir el comportamiento del viewport en el HTML:</p>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                <p>Esto le indica al navegador que ajuste el ancho del contenido al ancho del dispositivo.</p>
+            </section>
+
+            <section id="media-queries">
+                <h2>3. Estudio de las CSS3 Media Queries</h2>
+                <p>Las <strong>media queries</strong> son una parte fundamental del diseño responsivo. Permiten aplicar diferentes estilos CSS según las características del dispositivo (ancho de pantalla, orientación, resolución, etc.).</p>
+                
+                <h3>Ejemplo Básico de Media Queries:</h3>
+                <pre><code>
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+                </code></pre>
+                <p>Este ejemplo cambia el color de fondo a <strong>lightblue</strong> en pantallas con un ancho menor a 768 píxeles.</p>
+
+                <h3>Importancia de las Media Queries:</h3>
+                <ul>
+                    <li>Permiten adaptar el diseño web para que sea legible y accesible en todos los dispositivos.</li>
+                    <li>Ayudan a mejorar la usabilidad al ofrecer una interfaz personalizada para cada tipo de pantalla.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+  <div class="images-container">
+        <img src="#" alt="Imagen 1">
+        <img src="#" alt="Imagen 2">
+        <img src="#" alt="Imagen 3">
+        <img src="#" alt="Imagen 4">
+    </div>
+
+   <footer>
+        <div>Contenido Footer 1</div>
+        <div>Contenido Footer 2</div>
+    </footer>
+
+</body>
+</html>
